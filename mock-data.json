@@ -1,0 +1,24 @@
+{
+    "tricks": [
+        {
+            "trickName": "kickflip",
+            "difficulty": 3
+        },
+        {
+            "trickName": "bs 360",
+            "difficulty": 4
+        },
+        {
+            "trickName": "heelfip",
+            "difficulty": 3
+        },
+        {
+            "trickName": "switch kickflip",
+            "difficulty": 7
+        },
+        {
+            "trickName": "hardflip",
+            "difficulty": 10
+        }
+    ]
+}

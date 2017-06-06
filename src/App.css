@@ -1,0 +1,28 @@
+.App {
+  text-align: center;
+}
+
+table {
+    margin: 0 auto;
+    width: 90%;
+    border: none;
+    display: table;
+    text-align: center;
+    border-collapse: collapse;
+}
+thead {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.trick-prop-title, .trick-prop {
+    padding: 8px;
+}
+input {
+    outline: none;
+    border: none;
+    font-size: inherit;
+    border: 1px solid #777;
+    width: 80%;
+    text-align: center;
+    margin-top: 8px;
+}
