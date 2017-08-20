@@ -3,24 +3,26 @@ import './App.css'
 import Trick from './Trick'
 
 const tricks = [
-    { trickName: "kickflip", difficulty: 3 },
-    { trickName: "bs 360", difficulty: 4 }
+    { name: "kickflip", difficulty: 3 },
+    { name: "bs 360", difficulty: 4 },
+    { name: "kickflip", difficulty: 3 },
+    { name: "bs 360", difficulty: 4 }
 ]
 
 export default class App extends Component {
     state = { tricks }
 
     deleteTrick = (e) => {
-        const clickedTrickAsNodeList = e.target.parentNode.children
+        console.log('this.foo is:', this.foo);
         const clickedTrick = {
-            trickName: clickedTrickAsNodeList[0].textContent,
-            difficulty: Number(clickedTrickAsNodeList[1].textContent)
+            name: this.foo.props.name,
+            difficulty: this.foo.props.difficulty
         }
-        this.setState({ tricks: withoutItem(clickedTrick, tricks) })
+        // this.setState({ tricks: withoutItem(clickedTrick, tricks) })
     }
 
     render(props, { tricks }) {
-        const trickComponents = tricks.map(trick => <Trick {...trick} deleteTrick={this.deleteTrick}/>)
+        const trickComponents = tricks.map(trick => <Trick {...trick} deleteTrick={this.deleteTrick} ref={x => this.foo = x}/>)
         return (
             <div class='App'>
                 <h1>Skate List</h1>
